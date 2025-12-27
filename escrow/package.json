@@ -1,0 +1,11 @@
+{
+  "name": "escrow",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "ethers": "5.7.2",
+    "hardhat": "2.22.2"
+  }
+}
