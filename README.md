@@ -1,16 +1,49 @@
-# React + Vite
+# Web3 Freelancing Escrow DApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal Web3 freelancing escrow MVP that enables trustless payments between a client and a freelancer using smart contracts.
 
-Currently, two official plugins are available:
+The client locks ETH in an escrow contract, and funds are released to the freelancer only after job approval. If the job is cancelled, the client can refund the funds.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Smart contract–based escrow
+- Wallet connection (MetaMask)
+- ETH locked securely in contract
+- Client can release payment to freelancer
+- Client can refund payment if job is cancelled
+- Simple React frontend connected to blockchain
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- Solidity
+- Hardhat
+- Ethers.js
+- React + Vite
+- MetaMask
+
+---
+
+## How It Works
+
+1. Client deploys escrow contract with freelancer address and ETH
+2. Funds are locked in the smart contract
+3. Client releases payment after work completion
+4. Or client refunds payment if job is cancelled
+
+---
+
+## Run Locally
+
+```bash
+git clone https://github.com/Pranjal-077/web3-Freelancing.git
+cd web3-Freelancing
+yarn install
+cd escrow
+yarn hardhat compile
+yarn hardhat run scripts/deploy.js
+cd ..
+yarn dev
