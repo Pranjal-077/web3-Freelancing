@@ -1,5 +1,9 @@
 # Web3 Freelancing Escrow DApp
 
+## Demo
+
+![Web3 Freelancing Escrow UI](./images/freelancing-ui.png)
+
 A minimal Web3 freelancing escrow MVP that enables trustless payments between a client and a freelancer using smart contracts.
 
 The client locks ETH in an escrow contract, and funds are released to the freelancer only after job approval. If the job is cancelled, the client can refund the funds.
